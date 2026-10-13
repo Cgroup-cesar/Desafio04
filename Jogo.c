@@ -14,7 +14,7 @@ typedef struct {
     float raio;
 } Alvo;
 
-// ---------- logica: muda o estado, nao desenha ----------
+
 void sorteiaPosicao(Alvo *alvo) {                                                   // coloca o alvo em um lugar aleatorio
     int r = (int)alvo->raio;
     alvo->pos.x = GetRandomValue(r, LARGURA - r);
@@ -28,7 +28,7 @@ void iniciaPartida(Alvo *alvo, int *pontos, float *tempoRestante) {
     *tempoRestante = TEMPO_JOGO;
 }
 
-// ---------- desenho: so le o estado ----------
+
 void desenhaAlvo(Alvo alvo) { DrawCircleV(alvo.pos, alvo.raio, RED); }
 
 int main(void) {
